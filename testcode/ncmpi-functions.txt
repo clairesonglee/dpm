@@ -1,0 +1,6 @@
+int ncmpi_open(MPI_Comm comm, const char *path, int cmode, MPI_Info info, int *ncidp)
+
+int ncmpi_create(MPI_Comm comm, const char *path, int cmode, MPI_Info info, int *ncidp)
+
+int ncmpi_close(int ncid)
+
