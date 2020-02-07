@@ -16,10 +16,10 @@ open_ncmpi: open_ncmpi.c
 	$(MPICC) $(INCLUDES) -o open_ncmpi open_ncmpi.c $(LDFLAGS) $(LIBS)
 
 hello_world: hello_world.c
-        $(MPICC) $(INCLUDES) -o hello_world hello_world.c $(LDFLAGS) $(LIBS)
+	$(MPICC) $(INCLUDES) -o hello_world hello_world.c $(LDFLAGS) $(LIBS)
 
 summation: summation.c
-        $(MPICC) $(INCLUDES) -o summation summation.c $(LDFLAGS) $(LIBS)
+	$(MPICC) $(INCLUDES) -o summation summation.c $(LDFLAGS) $(LIBS)
 
 clean:
 	rm create_ncmpi
