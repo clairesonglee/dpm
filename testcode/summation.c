@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <hdf5.h>
 #define n 100
 
 int main(int argc, char* argv[])

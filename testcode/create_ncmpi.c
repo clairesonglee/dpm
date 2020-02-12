@@ -8,7 +8,7 @@ int main (void) {
 	int err_create, err_close, ncid, cmode = NC_CLOBBER | NC_64BIT_DATA;
 	MPI_Info info;
 
-err_create = ncmpi_create(MPI_COMM_WORLD, "foo.nc", cmode, MPI_INFO_NULL, &ncid);
+	err_create = ncmpi_create(MPI_COMM_WORLD, "foo.nc", cmode, MPI_INFO_NULL, &ncid);
 	if (err_create != NC_NOERR) printf("Error: %s\n",ncmpi_strerror(err_create));
 	
 
