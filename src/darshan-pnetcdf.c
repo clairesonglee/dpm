@@ -28,6 +28,8 @@ DARSHAN_FORWARD_DECL(ncmpi_create, int, (MPI_Comm comm, const char *path, int cm
 DARSHAN_FORWARD_DECL(ncmpi_open, int, (MPI_Comm comm, const char *path, int omode, MPI_Info info, int *ncidp));
 DARSHAN_FORWARD_DECL(ncmpi_close, int, (int ncid));
 DARSHAN_FORWARD_DECL(ncmpi_delete, int, (const char *filename, MPI_Info info));
+DARSHAN_FORWARD_DECL(ncmpi_redef, int, (int ncid));
+DARSHAN_FORWARD_DECL(ncmpi_enddef, int, (int ncid));
 
 /* structure that can track i/o stats for a given PNETCDF file record at runtime */
 struct pnetcdf_file_record_ref
@@ -110,7 +112,15 @@ static int my_rank = -1;
 } while(0)
 
 #define PNETCDF_RECORD_DELETE(__filename, __tm1, __tm2) do { \
-    printf("testing delete fn\n"); \
+    printf("Testing delete function\n"); \
+} while(0)
+
+#define PNETCDF_REDEF_DELETE(__ncid, __tm1, __tm2) do { \
+    printf("Testing redef function\n"); \
+} while(0)
+
+#define PNETCDF_ENDDEF_DELETE(__ncid, __tm1, __tm2) do { \
+    printf("Testing enddef function\n"); \
 } while(0)
 
 /*********************************************************
@@ -231,6 +241,47 @@ int DARSHAN_DECL(ncmpi_delete)(const char *filename, MPI_Info info)
     return(ret);
 }
 
+int DARSHAN_DECL(ncmpi_redef)(int ncid)
+{
+    int ret;
+    char* tmp;
+    double tm1, tm2;
+
+    MAP_OR_FAIL(ncmpi_redef);
+
+    tm1 = darshan_core_wtime();
+    ret = __real_ncmpi_redef(ncid);
+    tm2 = darshan_core_wtime();
+    if(ret == 0)
+    {
+        PNETCDF_PRE_RECORD();
+        PNETCDF_RECORD_REDEF(ncid, tm1, tm2);
+        PNETCDF_POST_RECORD();
+    }
+
+    return(ret);
+}
+
+int DARSHAN_DECL(ncmpi_enddef)(int ncid)
+{
+    int ret;
+    char* tmp;
+    double tm1, tm2;
+
+    MAP_OR_FAIL(ncmpi_enddef);
+
+    tm1 = darshan_core_wtime();
+    ret = __real_ncmpi_enddef(ncid);
+    tm2 = darshan_core_wtime();
+    if(ret == 0)
+    {
+        PNETCDF_PRE_RECORD();
+        PNETCDF_RECORD_ENDDEF(ncid, tm1, tm2);
+        PNETCDF_POST_RECORD();
+    }
+
+    return(ret);
+}
 /************************************************************
  * Internal functions for manipulating PNETCDF module state *
  ************************************************************/
