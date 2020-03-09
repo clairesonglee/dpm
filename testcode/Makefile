@@ -7,7 +7,7 @@ INCLUDES	= -I$(PnetCDF_DIR)/include -I.
 LDFLAGS		= -L$(PnetCDF_DIR)/lib
 LIBS		= -lpnetcdf $(shell $(PnetCDF_DIR)/bin/pnetcdf-config --libs)
 
-all: create_ncmpi open_ncmpi delete_ncmpi redef_ncmpi enddef_ncmpi hello_world summation 
+all: create_ncmpi open_ncmpi delete_ncmpi redef_ncmpi enddef_ncmpi sync_ncmpi summation 
 
 create_ncmpi: create_ncmpi.c
 	$(MPICC) $(INCLUDES) -o create_ncmpi create_ncmpi.c $(LDFLAGS) $(LIBS)
@@ -24,8 +24,8 @@ redef_ncmpi: redef_ncmpi.c
 enddef_ncmpi: enddef_ncmpi.c
 	$(MPICC) $(INCLUDES) -o enddef_ncmpi enddef_ncmpi.c $(LDFLAGS) $(LIBS)
 
-hello_world: hello_world.c
-	$(MPICC) $(INCLUDES) -o hello_world hello_world.c $(LDFLAGS) $(LIBS)
+sync_ncmpi: sync_ncmpi.c
+	$(MPICC) $(INCLUDES) -o sync_ncmpi sync_ncmpi.c $(LDFLAGS) $(LIBS)
 
 summation: summation.c
 	$(MPICC) $(INCLUDES) -o summation summation.c $(LDFLAGS) $(LIBS)
@@ -36,5 +36,5 @@ clean:
 	rm delete_ncmpi
 	rm redef_ncmpi
 	rm enddef_ncmpi
-	rm hello_world
+	rm sync_ncmpi
 	rm summation
