@@ -24,7 +24,7 @@ redef_ncmpi: redef_ncmpi.c
 enddef_ncmpi: enddef_ncmpi.c
 	$(MPICC) $(INCLUDES) -o enddef_ncmpi enddef_ncmpi.c $(LDFLAGS) $(LIBS)
 
-sync_ncmpi: test_dataset.c
+test_dataset: test_dataset.c
 	$(MPICC) $(INCLUDES) -o test_dataset test_dataset.c $(LDFLAGS) $(LIBS)
 
 summation: summation.c
