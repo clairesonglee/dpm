@@ -6,29 +6,22 @@ int main (void) {
 
 	MPI_Init(NULL, NULL);
  
-	int err, ncid, varid;
+	int err, ncid, varid, cmode = NC_CLOBBER | NC_64BIT_DATA;
 	MPI_Info info;
     
 	MPI_Info_create (&info);
 	MPI_Info_set (info, "romio_no_indep_rw", "true");
 	MPI_Info_set (info, "nc_header_read_chunk_size", "1024");
 
-	err = ncmpi_open(MPI_COMM_WORLD, "foo.nc", NC_WRITE, info,  &ncid);
-	if (err != NC_NOERR) printf("Error: %s\n",ncmpi_strerror(err));
-	MPI_Info_free(&info);
+	err = ncmpi_create(MPI_COMM_WORLD, "test_getput.nc", cmode, MPI_INFO_NULL, &ncid); 
+	if(err != NC_NOERR) printf("Error: %s\n", ncmpi_strerror(err));
 
-	err = ncmpi_redef(ncid); /* enter define mode */
-	if (err != NC_NOERR) printf("Error: %s\n",ncmpi_strerror(err));
-
-	err = ncmpi_enddef(ncid); /* exit define mode */
-	if (err != NC_NOERR) printf("Error: %s\n",ncmpi_strerror(err));
-
-	err = ncmpi_sync(ncid); /* synchronize to disk */
+	err = ncmpi_enddef(ncid); 
 	if (err != NC_NOERR) printf("Error: %s\n",ncmpi_strerror(err));
 
 	double var; /* initialize temporary variable */
 	err = ncmpi_inq_varid(ncid, "d", &varid);
-	if(err != NC_NOERR) printf("ncmpi_inq_varid: %s", ncmpi_strerror(err)); 
+	if(err != NC_NOERR) printf("ncmpi_inq_varid: %s\n", ncmpi_strerror(err)); 
 	var = 1.0;
 
 	/* independently write single data value to file */
@@ -52,9 +45,6 @@ int main (void) {
 	err = ncmpi_get_var1_double_all(ncid, varid, NULL, &var);
 	if (err != NC_NOERR) printf("ncmpi_get_var1_double_all: %s\n", ncmpi_strerror(err));
 	if (var != 1.0) printf("ncmpi_get_var1_double_all: unexpected value"); 
-
-
-	err = ncmpi_close(ncid); 
 
 	MPI_Finalize();
 	return 0; 
