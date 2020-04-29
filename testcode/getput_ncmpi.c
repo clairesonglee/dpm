@@ -13,16 +13,16 @@ int main (void) {
 	MPI_Info_set (info, "romio_no_indep_rw", "true");
 	MPI_Info_set (info, "nc_header_read_chunk_size", "1024");
 
-	err = ncmpi_create(MPI_COMM_WORLD, "test_getput.nc", cmode, MPI_INFO_NULL, &ncid); 
+	err = ncmpi_create(MPI_COMM_WORLD, "test_getput.nc", cmode, info, &ncid); 
 	if(err != NC_NOERR) printf("Error: %s\n", ncmpi_strerror(err));
-
-	err = ncmpi_enddef(ncid); 
-	if (err != NC_NOERR) printf("Error: %s\n",ncmpi_strerror(err));
 
 	double var; /* initialize temporary variable */
 	err = ncmpi_inq_varid(ncid, "d", &varid);
 	if(err != NC_NOERR) printf("ncmpi_inq_varid: %s\n", ncmpi_strerror(err)); 
 	var = 1.0;
+
+	err = ncmpi_enddef(ncid); 
+	if (err != NC_NOERR) printf("Error: %s\n",ncmpi_strerror(err));
 
 	/* independently write single data value to file */
 	err = ncmpi_begin_indep_data(ncid);
