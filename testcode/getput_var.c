@@ -8,6 +8,8 @@
 #define LATS 5
 #define LONS 10 
 
+#define NDIM 2
+
 int create_file (MPI_Comm comm, char *filename, int cmode) {
  
 	int err, ncid;
@@ -129,7 +131,58 @@ int put_vara_all (MPI_Comm comm, char *filename, int cmode) {
 	return 0; 
 }
 
-  
+int put_vars_all (MPI_Comm comm, char *filename, int cmode) {
+	int err; 
+	int ncid;                         /* netCDF ID */
+	int rank; 
+	int status;                       /* error status */
+	int rhid;                         /* variable ID */
+	MPI_Offset start[NDIM];           /* netCDF variable start point: first element */
+	MPI_Offset count[NDIM] = {2, 3};  /* size of internal array: entire (subsampled) netCDF variable */
+	MPI_Offset stride[NDIM] = {2, 2}; /* variable subsampling intervals: access every other netCDF element */
+	//const float rh[2][3];                   /* note subsampled sizes for netCDF variable dimensions */
+
+	err = ncmpi_open(comm, filename, NC_WRITE, MPI_INFO_NULL, &ncid); ERR
+
+	err = ncmpi_inq_varid(ncid, "rh", &rhid); ERR
+
+	MPI_Comm_rank(comm, &rank);
+	if (rank == 0) {
+    		start[0] = 0;
+    		start[1] = 0;                 /* write locations by process rank IDs: */
+	} else if (rank == 1) {              
+    		start[0] = 0;                
+    		start[1] = 1;                   
+	} else if (rank == 2) {              
+    		start[0] = 1;                  
+    		start[1] = 0;
+	} else if (rank == 3) {
+    		start[0] = 1;
+    		start[1] = 1;
+	}
+    
+	err = ncmpi_put_vars_float_all(ncid, rhid, start, count, stride, rh); ERR
+
+}
+ 
+put_varm_all (comm, filename, cmode) {
+	int ncid;                         /* netCDF ID */
+	int err;                       /* error status */
+	int rhid;                         /* variable ID */
+	MPI_Offset start[NDIM] = {0, 0};  /* netCDF variable start point: first element */
+	MPI_Offset count[NDIM] = {6, 4};  /* size of internal array: entire netCDF variable; order corresponds to netCDF variable -- not internal array */
+	MPI_Offset stride[NDIM] = {1, 1}; /* variable subsampling intervals: sample every netCDF element */
+	MPI_Offset imap[NDIM] = {1, 6};   /* internal array inter-element distances; would be {4, 1} if not transposing */
+	float buf[4][6];                  /* note transposition of netCDF variable dimensions */
+   
+	err = ncmpi_open(comm, filename, NC_WRITE, MPI_INFO_NULL,  &ncid); ERR
+
+	err = ncmpi_inq_varid(ncid, "rh", &rhid); ERR
+
+	err = ncmpi_put_varm_float_all(ncid, rhid, start, count, stride, imap, buf);
+
+} 
+
 int main (void) {
 
 	MPI_Init(NULL, NULL);
@@ -142,6 +195,9 @@ int main (void) {
 	put_var (comm, filename, cmode); 
 	put_var1_all (comm, filename, cmode); 
 	put_vara_all (comm, filename, cmode); 
+	put_vars_all (comm, filename, cmode); 
+	put_varm_all (comm, filename, cmode); 
+	
 
 	MPI_Finalize();
 	return 0; 
