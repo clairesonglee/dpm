@@ -140,7 +140,7 @@ int put_vars_all (MPI_Comm comm, char *filename, int cmode) {
 	MPI_Offset start[NDIM];           /* netCDF variable start point: first element */
 	MPI_Offset count[NDIM] = {2, 3};  /* size of internal array: entire (subsampled) netCDF variable */
 	MPI_Offset stride[NDIM] = {2, 2}; /* variable subsampling intervals: access every other netCDF element */
-	//const float rh[2][3];                   /* note subsampled sizes for netCDF variable dimensions */
+	const float rh[6];                   /* note subsampled sizes for netCDF variable dimensions */
 
 	err = ncmpi_open(comm, filename, NC_WRITE, MPI_INFO_NULL, &ncid); ERR
 
@@ -163,9 +163,10 @@ int put_vars_all (MPI_Comm comm, char *filename, int cmode) {
     
 	err = ncmpi_put_vars_float_all(ncid, rhid, start, count, stride, rh); ERR
 
+	return 0; 
 }
  
-put_varm_all (comm, filename, cmode) {
+int put_varm_all (MPI_Comm comm, char *filename, int cmode) {
 	int ncid;                         /* netCDF ID */
 	int err;                       /* error status */
 	int rhid;                         /* variable ID */
@@ -173,7 +174,7 @@ put_varm_all (comm, filename, cmode) {
 	MPI_Offset count[NDIM] = {6, 4};  /* size of internal array: entire netCDF variable; order corresponds to netCDF variable -- not internal array */
 	MPI_Offset stride[NDIM] = {1, 1}; /* variable subsampling intervals: sample every netCDF element */
 	MPI_Offset imap[NDIM] = {1, 6};   /* internal array inter-element distances; would be {4, 1} if not transposing */
-	float buf[4][6];                  /* note transposition of netCDF variable dimensions */
+	float buf[24];                  /* note transposition of netCDF variable dimensions */
    
 	err = ncmpi_open(comm, filename, NC_WRITE, MPI_INFO_NULL,  &ncid); ERR
 
@@ -181,6 +182,7 @@ put_varm_all (comm, filename, cmode) {
 
 	err = ncmpi_put_varm_float_all(ncid, rhid, start, count, stride, imap, buf);
 
+	return 0; 
 } 
 
 int main (void) {
