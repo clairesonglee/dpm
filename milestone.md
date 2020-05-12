@@ -3,8 +3,8 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 
 ## Milestones 
 * Blocking Function APIs
-
-  * ncmpi_put_var*
+  * Independent Functions
+    * ncmpi_put_var*
 	* ncmpi_put_var_(type)
 	* ncmpi_put_var1_(type)
 	* ncmpi_put_vara_(type)
@@ -13,7 +13,7 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 	* ncmpi_put_varn_(type)
 	* ncmpi_put_vard
 
-  * ncmpi_get_var*
+    * ncmpi_get_var*
 	* ncmpi_get_var_(type)
 	* ncmpi_get_var1_(type)
 	* ncmpi_get_vara_(type)
@@ -22,24 +22,55 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 	* ncmpi_get_varn_(type)
 	* ncmpi_get_vard
 
+  * Collective Functions 
+    * ncmpi_put_var*_all
+	* ncmpi_put_var_(type)_all
+	* ncmpi_put_var1_(type)_all
+	* ncmpi_put_vara_(type)_all
+	* ncmpi_put_vars_(type)_all
+	* ncmpi_put_varm_(type)_all
+	* ncmpi_put_varn_(type)_all
+	* ncmpi_put_vard_all
+
+    * ncmpi_get_var*_all
+	* ncmpi_get_var_(type)_all
+	* ncmpi_get_var1_(type)_all
+	* ncmpi_get_vara_(type)_all
+	* ncmpi_get_vars_(type)_all
+	* ncmpi_get_varm_(type)_all
+	* ncmpi_get_varn_(type)_all
+	* ncmpi_get_vard_all
 
 * Non-blocking Function APIs
-
-  * ncmpi_iput_var*
+  * Independent Functions 
+    * ncmpi_iput_var*
 	* ncmpi_iput_var(kind)_(type)
 	* ncmpi_iput_varn_(type)
 
-  * ncmpi_iget_var*
+    * ncmpi_iget_var*
 	* ncmpi_iget_var(kind)_(type)
 	* ncmpi_iget_varn_(type)
 
-  * ncmpi_bput_var*
+    * ncmpi_bput_var*
 	* ncmpi_bput_var(kind)_(type)
 	* ncmpi_bput_varn_(type)
 
+  * Collective Functions 
+    * ncmpi_iput_var*_all
+	* ncmpi_iput_var(kind)_(type)_all
+	* ncmpi_iput_varn_(type)_all
+
+    * ncmpi_iget_var*
+	* ncmpi_iget_var(kind)_(type)_all
+	* ncmpi_iget_varn_(type)_all
+
+    * ncmpi_bput_var*
+	* ncmpi_bput_var(kind)_(type)_all
+	* ncmpi_bput_varn_(type)_all
 
 * Wait Function for Non-blocking APIs
- 
-  * ncmpi_wait
+  * Independent Function 
+    * ncmpi_wait
 
-  * ncmpi_wait_all
+  * Collective Function
+    * ncmpi_wait_all
