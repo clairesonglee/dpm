@@ -47,11 +47,11 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 		* ncmpi_iput_var(kind)_(type)
 		* ncmpi_iput_varn_(type)
 
-    	* ncmpi_iget_var*
+	* ncmpi_iget_var*
 		* ncmpi_iget_var(kind)_(type)
 		* ncmpi_iget_varn_(type)
 
-    	* ncmpi_bput_var*
+	* ncmpi_bput_var*
 		* ncmpi_bput_var(kind)_(type)
 		* ncmpi_bput_varn_(type)
 
