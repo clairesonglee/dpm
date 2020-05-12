@@ -56,21 +56,21 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 		* ncmpi_bput_varn_(type)
 
   * Collective Functions 
-    	* ncmpi_iput_var*_all
+	* ncmpi_iput_var*_all
 		* ncmpi_iput_var(kind)_(type)_all
 		* ncmpi_iput_varn_(type)_all
 
-    	* ncmpi_iget_var*
+	* ncmpi_iget_var*
 		* ncmpi_iget_var(kind)_(type)_all
 		* ncmpi_iget_varn_(type)_all
 
-    	* ncmpi_bput_var*
+	* ncmpi_bput_var*
 		* ncmpi_bput_var(kind)_(type)_all
 		* ncmpi_bput_varn_(type)_all
 
 * Wait Function for Non-blocking APIs
   * Independent Function 
-    	* ncmpi_wait
+	* ncmpi_wait
 
   * Collective Function
-    	* ncmpi_wait_all
+	* ncmpi_wait_all
