@@ -23,7 +23,7 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 	* ncmpi_get_vard
 
   * Collective Functions 
-    	* ncmpi_put_var*_all
+	* ncmpi_put_var*_all
 		* ncmpi_put_var_(type)_all
 		* ncmpi_put_var1_(type)_all
 		* ncmpi_put_vara_(type)_all
@@ -32,7 +32,7 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 		* ncmpi_put_varn_(type)_all
 		* ncmpi_put_vard_all
 
-    	* ncmpi_get_var*_all
+	* ncmpi_get_var*_all
 		* ncmpi_get_var_(type)_all
 		* ncmpi_get_var1_(type)_all
 		* ncmpi_get_vara_(type)_all
