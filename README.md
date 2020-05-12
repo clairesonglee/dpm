@@ -1,5 +1,5 @@
 # Darshan-PNetCDF Module
-The Darshan-PNetCDF supports parallel I/O functions for the PNetCDF library. This repo is organized as follows:
+The Darshan-PNetCDF module supports parallel I/O functions for the PNetCDF library. This repo is organized as follows:
 
 * testcode: This folder contains the test files used to test the  functionality of the implemented PNetCDF APIs
 
