@@ -4,57 +4,57 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 ## Milestones 
 * Blocking Function APIs
   * Independent Functions
-	* Functions: ncmpi_put_var*
-	* Testfile: 
-	* Output file: 
+	* ncmpi_put_var*
+		* Testfile: 
+		* Output file: 
 
 	* ncmpi_get_var*
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
 
   * Collective Functions 
 	* ncmpi_put_var*_all
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
 	
 	* ncmpi_get_var*_all
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
 
 * Non-blocking Function APIs
   * Independent Functions 
   	* ncmpi_iput_var*
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
 
 	* ncmpi_iget_var*
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
 
 	* ncmpi_bput_var*
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
 
   * Collective Functions 
 	* ncmpi_iput_var*_all
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
 
 	* ncmpi_iget_var*
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
 
 	* ncmpi_bput_var*
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
 
 * Wait Function for Non-blocking APIs
   * Independent Function 
 	* ncmpi_wait
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
 
   * Collective Function
 	* ncmpi_wait_all
-	* Testfile: 
-	* Output file: 
+		* Testfile: 
+		* Output file: 
