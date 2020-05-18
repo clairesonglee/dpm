@@ -8,6 +8,7 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 	* darshan=pnecdf-forward-decl-getput.h 
 * darshan-pnetcdf-stubs-getput.m4
 	* darshan=pnecdf-stubs-getput.h 
+* getput-utils.m4
 
 ## Milestones 
 * Blocking Function APIs
