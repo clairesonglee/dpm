@@ -7,7 +7,7 @@ INCLUDES	= -I$(PnetCDF_DIR)/include -I.
 LDFLAGS		= -L$(PnetCDF_DIR)/lib
 LIBS		= -lpnetcdf $(shell $(PnetCDF_DIR)/bin/pnetcdf-config --libs)
 
-all: create_ncmpi open_ncmpi delete_ncmpi redef_ncmpi enddef_ncmpi sync_ncmpi getput_ncmpi test_dataset summation getput_var
+all: create_ncmpi open_ncmpi delete_ncmpi redef_ncmpi enddef_ncmpi sync_ncmpi getput_ncmpi test_dataset summation getput_var put_vara put_varn_float put_varn_int get_vara create_open
 
 create_ncmpi: create_ncmpi.c
 	$(MPICC) $(INCLUDES) -o create_ncmpi create_ncmpi.c $(LDFLAGS) $(LIBS)
@@ -39,6 +39,21 @@ summation: summation.c
 getput_var: getput_var.c
 	$(MPICC) $(INCLUDES) -o getput_var getput_var.c $(LDFLAGS) $(LIBS)
 
+put_vara: put_vara.c
+	$(MPICC) $(INCLUDES) -o put_vara put_vara.c $(LDFLAGS) $(LIBS)
+
+put_varn_float: put_varn_float.c
+	$(MPICC) $(INCLUDES) -o put_varn_float put_varn_float.c $(LDFLAGS) $(LIBS)
+
+put_varn_int: put_varn_int.c
+	$(MPICC) $(INCLUDES) -o put_varn_int put_varn_int.c $(LDFLAGS) $(LIBS)
+
+get_vara: get_vara.c
+	$(MPICC) $(INCLUDES) -o get_vara get_vara.c $(LDFLAGS) $(LIBS)
+
+create_open: create_open.c
+	$(MPICC) $(INCLUDES) -o create_open create_open.c $(LDFLAGS) $(LIBS)
+
 clean:
 	rm create_ncmpi
 	rm open_ncmpi
@@ -50,3 +65,8 @@ clean:
 	rm test_dataset
 	rm summation
 	rm getput_var
+	rm put_vara
+	rm put_varn_float
+	rm put_varn_int
+	rm get_vara
+	rm create_open 
