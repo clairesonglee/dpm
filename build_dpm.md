@@ -15,3 +15,5 @@ To specify an output name, run the command
 
 ## Utilizing darshan-dxt-parser for *.txt file 
 darshan-dxt-parser ~/darshan-logs/2020/1/25/csl782_executable_name_id*.darshan > output.txt
+
+darshan-parser ~/darshan-logs/2020/1/25/csl782_executable_name_id*.darshan > output.txt
