@@ -1,5 +1,6 @@
 MPICC		= mpicc
-CFLAGS		= -O2
+CFLAGS		= -O0 -g
+#CFLAGS		= -O2
 
 PnetCDF_DIR	= $(HOME)/PNETCDF/1.12.0
 
