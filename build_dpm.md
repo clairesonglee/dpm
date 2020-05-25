@@ -2,7 +2,9 @@
 
 ## Running DPM testcode files
 'make install' in darshan source code directory (darshan-runtime)
+
 'make clean && make' in testcode directory (testcode)
+
 'mpirun -n 1 ./executable name' in same directory to run executable
 
 ## Generating darshan-job-summary PDF file  
