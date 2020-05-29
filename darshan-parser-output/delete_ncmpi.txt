@@ -1,0 +1,141 @@
+# darshan log version: 3.10
+# compression method: ZLIB
+# exe: ./delete_ncmpi 
+# uid: 18622
+# jobid: 7779
+# start_time: 1590779654
+# start_time_asci: Fri May 29 14:14:14 2020
+# end_time: 1590779654
+# end_time_asci: Fri May 29 14:14:14 2020
+# nprocs: 1
+# run time: 1
+# metadata: lib_ver = 3.2.0-pre1
+# metadata: h = romio_no_indep_rw=true;cb_nodes=4
+
+# log file regions
+# -------------------------------------------------------
+# header: 360 bytes (uncompressed)
+# job data: 201 bytes (compressed)
+# record table: 103 bytes (compressed)
+# PNETCDF module: 33 bytes (compressed), ver=2
+# STDIO module: 56 bytes (compressed), ver=2
+
+# mounted file systems (mount point and fs type)
+# -------------------------------------------------------
+# mount entry:	/a/nncore/files11	nfs
+# mount entry:	/mnt/usrlocal	nfs
+# mount entry:	/files1	ext4
+# mount entry:	/files2	ext4
+# mount entry:	/files3	ext4
+# mount entry:	/files4	ext4
+# mount entry:	/files5	ext4
+# mount entry:	/files6	ext4
+# mount entry:	/files7	ext4
+# mount entry:	/files8	ext4
+# mount entry:	/depot	nfs
+# mount entry:	/homes	nfs
+# mount entry:	/boot	ext4
+# mount entry:	/meas	nfs
+# mount entry:	/mail	nfs
+# mount entry:	/tmp	ext4
+# mount entry:	/usr	ext4
+# mount entry:	/var	ext4
+# mount entry:	/vol	nfs
+# mount entry:	/net	nfs
+# mount entry:	/	ext4
+
+# description of columns:
+#   <module>: module responsible for this I/O record.
+#   <rank>: MPI rank.  -1 indicates that the file is shared
+#      across all processes and statistics are aggregated.
+#   <record id>: hash of the record's file path
+#   <counter name> and <counter value>: statistical counters.
+#      A value of -1 indicates that Darshan could not monitor
+#      that counter, and its value should be ignored.
+#   <file name>: full file path for the record.
+#   <mount pt>: mount point that the file resides on.
+#   <fs type>: type of file system that the file resides on.
+
+# *******************************************************
+# PNETCDF module data
+# *******************************************************
+
+# description of PNETCDF counters:
+#   PNETCDF_INDEP_OPENS: PNETCDF independent file open operation counts.
+#   PNETCDF_COLL_OPENS: PNETCDF collective file open operation counts.
+#   PNETCDF_F_*_START_TIMESTAMP: timestamp of first PNETCDF file open/close.
+#   PNETCDF_F_*_END_TIMESTAMP: timestamp of last PNETCDF file open/close.
+
+#<module>	<rank>	<record id>	<counter>	<value>	<file name>	<mount pt>	<fs type>
+PNETCDF	-1	8479730873981485481	PNETCDF_INDEP_OPENS	0	/files4/home/csl782/dpm/testcode/foo.nc	/files4	ext4
+PNETCDF	-1	8479730873981485481	PNETCDF_COLL_OPENS	0	/files4/home/csl782/dpm/testcode/foo.nc	/files4	ext4
+PNETCDF	-1	8479730873981485481	PNETCDF_F_OPEN_START_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/foo.nc	/files4	ext4
+PNETCDF	-1	8479730873981485481	PNETCDF_F_CLOSE_START_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/foo.nc	/files4	ext4
+PNETCDF	-1	8479730873981485481	PNETCDF_F_DELETE_START_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/foo.nc	/files4	ext4
+PNETCDF	-1	8479730873981485481	PNETCDF_F_REDEF_START_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/foo.nc	/files4	ext4
+PNETCDF	-1	8479730873981485481	PNETCDF_F_OPEN_END_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/foo.nc	/files4	ext4
+PNETCDF	-1	8479730873981485481	PNETCDF_F_CLOSE_END_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/foo.nc	/files4	ext4
+PNETCDF	-1	8479730873981485481	PNETCDF_F_DELETE_END_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/foo.nc	/files4	ext4
+PNETCDF	-1	8479730873981485481	PNETCDF_F_REDEF_END_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/foo.nc	/files4	ext4
+PNETCDF	0	0	PNETCDF_INDEP_OPENS	0	(null)	UNKNOWN	UNKNOWN
+PNETCDF	0	0	PNETCDF_COLL_OPENS	4569082141874323456	(null)	UNKNOWN	UNKNOWN
+PNETCDF	0	0	PNETCDF_F_OPEN_START_TIMESTAMP	0.000000	(null)	UNKNOWN	UNKNOWN
+PNETCDF	0	0	PNETCDF_F_CLOSE_START_TIMESTAMP	0.000000	(null)	UNKNOWN	UNKNOWN
+PNETCDF	0	0	PNETCDF_F_DELETE_START_TIMESTAMP	0.000000	(null)	UNKNOWN	UNKNOWN
+PNETCDF	0	0	PNETCDF_F_REDEF_START_TIMESTAMP	0.000000	(null)	UNKNOWN	UNKNOWN
+PNETCDF	0	0	PNETCDF_F_OPEN_END_TIMESTAMP	0.000000	(null)	UNKNOWN	UNKNOWN
+PNETCDF	0	0	PNETCDF_F_CLOSE_END_TIMESTAMP	0.003086	(null)	UNKNOWN	UNKNOWN
+PNETCDF	0	0	PNETCDF_F_DELETE_END_TIMESTAMP	0.000000	(null)	UNKNOWN	UNKNOWN
+PNETCDF	0	0	PNETCDF_F_REDEF_END_TIMESTAMP	0.000000	(null)	UNKNOWN	UNKNOWN
+
+# *******************************************************
+# STDIO module data
+# *******************************************************
+
+# description of STDIO counters:
+#   STDIO_{OPENS|FDOPENS|WRITES|READS|SEEKS|FLUSHES} are types of operations.
+#   STDIO_BYTES_*: total bytes read and written.
+#   STDIO_MAX_BYTE_*: highest offset byte read and written.
+#   STDIO_*_RANK: rank of the processes that were the fastest and slowest at I/O (for shared files).
+#   STDIO_*_RANK_BYTES: bytes transferred by the fastest and slowest ranks (for shared files).
+#   STDIO_F_*_START_TIMESTAMP: timestamp of the first call to that type of function.
+#   STDIO_F_*_END_TIMESTAMP: timestamp of the completion of the last call to that type of function.
+#   STDIO_F_*_TIME: cumulative time spent in different types of functions.
+#   STDIO_F_*_RANK_TIME: fastest and slowest I/O time for a single rank (for shared files).
+#   STDIO_F_VARIANCE_RANK_*: variance of total I/O time and bytes moved for all ranks (for shared files).
+
+# WARNING: STDIO_OPENS counter includes STDIO_FDOPENS count
+
+# WARNING: STDIO counters related to file offsets may be incorrect if a file is simultaneously accessed by both STDIO and POSIX (e.g., using fdopen())
+# 	- Affected counters include: MAX_BYTE_{READ|WRITTEN}
+
+#<module>	<rank>	<record id>	<counter>	<value>	<file name>	<mount pt>	<fs type>
+STDIO	-1	15920181672442173319	STDIO_OPENS	1	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_FDOPENS	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_READS	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_WRITES	2	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_SEEKS	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_FLUSHES	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_BYTES_WRITTEN	45	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_BYTES_READ	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_MAX_BYTE_READ	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_MAX_BYTE_WRITTEN	44	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_FASTEST_RANK	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_FASTEST_RANK_BYTES	45	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_SLOWEST_RANK	0	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_SLOWEST_RANK_BYTES	45	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_META_TIME	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_WRITE_TIME	0.000029	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_READ_TIME	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_OPEN_START_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_CLOSE_START_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_WRITE_START_TIMESTAMP	0.003097	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_READ_START_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_OPEN_END_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_CLOSE_END_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_WRITE_END_TIMESTAMP	0.003163	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_READ_END_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_FASTEST_RANK_TIME	0.000029	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_SLOWEST_RANK_TIME	0.000029	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_VARIANCE_RANK_TIME	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_VARIANCE_RANK_BYTES	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
