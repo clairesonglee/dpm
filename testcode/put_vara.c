@@ -214,7 +214,7 @@ int main(int argc, char** argv)
 
     MPI_Bcast(filename, 256, MPI_CHAR, 0, MPI_COMM_WORLD);
 
-    if (verbose && rank == 0) printf("%s: example of using put_vara APIs\n",__FILE__);
+    if (verbose && rank == 0) printf("%s: example of using put_vara APIs %s\n",__FILE__,filename);
 
     switch (kind) {
         case(2): cmode = NC_64BIT_OFFSET;             break;

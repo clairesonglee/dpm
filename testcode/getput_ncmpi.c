@@ -67,6 +67,9 @@ int main (void) {
 	if (var != 1.0) printf("ncmpi_get_var1_double_all: unexpected value"); 
 	*/
 
+	err = ncmpi_close(ncid);
+	if (err != NC_NOERR) printf("ncmpi_close: %s\n", ncmpi_strerror(err));
+
 	MPI_Finalize();
 	return 0; 
 }

@@ -36,6 +36,8 @@ int create_file (MPI_Comm comm, char *filename, int cmode) {
 
 	err = ncmpi_enddef(ncid); ERR
 	
+	err = ncmpi_close(ncid); ERR
+
 	return 0; 
 }
 
@@ -61,8 +63,11 @@ int put_var (MPI_Comm comm, char *filename, int cmode) {
 		err = ncmpi_put_var_double(ncid, rh_id, rh_vals); ERR 
 	}
 
-	err = ncmpi_end_indep_data(ncid);
-	if (err != NC_NOERR); ERR 
+	err = ncmpi_end_indep_data(ncid); ERR
+
+	err = ncmpi_close(ncid); ERR
+
+	return 0; 
 }
 
 int put_var1_all (MPI_Comm comm, char *filename, int cmode) {
@@ -163,6 +168,8 @@ int put_vars_all (MPI_Comm comm, char *filename, int cmode) {
     
 	err = ncmpi_put_vars_float_all(ncid, rhid, start, count, stride, rh); ERR
 
+	err = ncmpi_close(ncid); ERR
+
 	return 0; 
 }
  
@@ -182,6 +189,8 @@ int put_varm_all (MPI_Comm comm, char *filename, int cmode) {
 
 	err = ncmpi_put_varm_float_all(ncid, rhid, start, count, stride, imap, buf);
 
+	err = ncmpi_close(ncid); ERR
+
 	return 0; 
 } 
 
@@ -199,7 +208,6 @@ int main (void) {
 	put_vara_all (comm, filename, cmode); 
 	put_vars_all (comm, filename, cmode); 
 	put_varm_all (comm, filename, cmode); 
-	
 
 	MPI_Finalize();
 	return 0; 
