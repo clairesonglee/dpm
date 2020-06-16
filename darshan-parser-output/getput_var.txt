@@ -2,11 +2,11 @@
 # compression method: ZLIB
 # exe: ./getput_var 
 # uid: 18622
-# jobid: 7791
-# start_time: 1590779701
-# start_time_asci: Fri May 29 14:15:01 2020
-# end_time: 1590779701
-# end_time_asci: Fri May 29 14:15:01 2020
+# jobid: 14425
+# start_time: 1592276056
+# start_time_asci: Mon Jun 15 21:54:16 2020
+# end_time: 1592276056
+# end_time_asci: Mon Jun 15 21:54:16 2020
 # nprocs: 1
 # run time: 1
 # metadata: lib_ver = 3.2.0-pre1
@@ -15,12 +15,12 @@
 # log file regions
 # -------------------------------------------------------
 # header: 360 bytes (uncompressed)
-# job data: 198 bytes (compressed)
+# job data: 200 bytes (compressed)
 # record table: 109 bytes (compressed)
-# POSIX module: 169 bytes (compressed), ver=4
-# MPI-IO module: 142 bytes (compressed), ver=3
-# PNETCDF module: 54 bytes (compressed), ver=2
-# STDIO module: 56 bytes (compressed), ver=2
+# POSIX module: 171 bytes (compressed), ver=4
+# MPI-IO module: 146 bytes (compressed), ver=3
+# PNETCDF module: 57 bytes (compressed), ver=2
+# STDIO module: 55 bytes (compressed), ver=2
 
 # mounted file systems (mount point and fs type)
 # -------------------------------------------------------
@@ -123,7 +123,7 @@ POSIX	-1	13495189748626597623	POSIX_MEM_NOT_ALIGNED	0	/files4/home/csl782/dpm/te
 POSIX	-1	13495189748626597623	POSIX_MEM_ALIGNMENT	8	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 POSIX	-1	13495189748626597623	POSIX_FILE_NOT_ALIGNED	11	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 POSIX	-1	13495189748626597623	POSIX_FILE_ALIGNMENT	4096	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_MAX_READ_TIME_SIZE	112	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_MAX_READ_TIME_SIZE	8	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 POSIX	-1	13495189748626597623	POSIX_MAX_WRITE_TIME_SIZE	112	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 POSIX	-1	13495189748626597623	POSIX_SIZE_READ_0_100	10	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 POSIX	-1	13495189748626597623	POSIX_SIZE_READ_100_1K	2	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
@@ -165,21 +165,21 @@ POSIX	-1	13495189748626597623	POSIX_FASTEST_RANK	0	/files4/home/csl782/dpm/testc
 POSIX	-1	13495189748626597623	POSIX_FASTEST_RANK_BYTES	6128	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 POSIX	-1	13495189748626597623	POSIX_SLOWEST_RANK	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 POSIX	-1	13495189748626597623	POSIX_SLOWEST_RANK_BYTES	6128	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_OPEN_START_TIMESTAMP	0.003266	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_READ_START_TIMESTAMP	0.003675	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_WRITE_START_TIMESTAMP	0.003566	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_CLOSE_START_TIMESTAMP	0.003316	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_OPEN_END_TIMESTAMP	0.015902	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_READ_END_TIMESTAMP	0.015940	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_WRITE_END_TIMESTAMP	0.016019	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_CLOSE_END_TIMESTAMP	0.016032	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_READ_TIME	0.000032	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_WRITE_TIME	0.000059	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_META_TIME	0.000087	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_MAX_READ_TIME	0.000006	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_MAX_WRITE_TIME	0.000019	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_FASTEST_RANK_TIME	0.000177	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-POSIX	-1	13495189748626597623	POSIX_F_SLOWEST_RANK_TIME	0.000177	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_OPEN_START_TIMESTAMP	0.011704	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_READ_START_TIMESTAMP	0.013537	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_WRITE_START_TIMESTAMP	0.013440	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_CLOSE_START_TIMESTAMP	0.011753	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_OPEN_END_TIMESTAMP	0.015761	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_READ_END_TIMESTAMP	0.015793	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_WRITE_END_TIMESTAMP	0.015856	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_CLOSE_END_TIMESTAMP	0.015863	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_READ_TIME	0.000024	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_WRITE_TIME	0.000049	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_META_TIME	0.000069	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_MAX_READ_TIME	0.000004	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_MAX_WRITE_TIME	0.000017	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_FASTEST_RANK_TIME	0.000141	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+POSIX	-1	13495189748626597623	POSIX_F_SLOWEST_RANK_TIME	0.000141	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 POSIX	-1	13495189748626597623	POSIX_F_VARIANCE_RANK_TIME	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 POSIX	-1	13495189748626597623	POSIX_F_VARIANCE_RANK_BYTES	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 
@@ -231,7 +231,7 @@ MPI-IO	-1	13495189748626597623	MPIIO_BYTES_READ	1310720	/files4/home/csl782/dpm/
 MPI-IO	-1	13495189748626597623	MPIIO_BYTES_WRITTEN	536	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 MPI-IO	-1	13495189748626597623	MPIIO_RW_SWITCHES	10	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 MPI-IO	-1	13495189748626597623	MPIIO_MAX_READ_TIME_SIZE	262144	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_MAX_WRITE_TIME_SIZE	112	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_MAX_WRITE_TIME_SIZE	8	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 MPI-IO	-1	13495189748626597623	MPIIO_SIZE_READ_AGG_0_100	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 MPI-IO	-1	13495189748626597623	MPIIO_SIZE_READ_AGG_100_1K	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 MPI-IO	-1	13495189748626597623	MPIIO_SIZE_READ_AGG_1K_10K	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
@@ -264,21 +264,21 @@ MPI-IO	-1	13495189748626597623	MPIIO_FASTEST_RANK	0	/files4/home/csl782/dpm/test
 MPI-IO	-1	13495189748626597623	MPIIO_FASTEST_RANK_BYTES	1311256	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 MPI-IO	-1	13495189748626597623	MPIIO_SLOWEST_RANK	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 MPI-IO	-1	13495189748626597623	MPIIO_SLOWEST_RANK_BYTES	1311256	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_OPEN_START_TIMESTAMP	0.003050	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_READ_START_TIMESTAMP	0.003782	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_WRITE_START_TIMESTAMP	0.003553	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_CLOSE_START_TIMESTAMP	0.003608	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_OPEN_END_TIMESTAMP	0.015918	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_READ_END_TIMESTAMP	0.015941	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_WRITE_END_TIMESTAMP	0.016021	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_CLOSE_END_TIMESTAMP	0.016038	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_READ_TIME	0.000048	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_WRITE_TIME	0.000132	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_META_TIME	0.000842	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_MAX_READ_TIME	0.000018	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_MAX_WRITE_TIME	0.000043	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_FASTEST_RANK_TIME	0.001022	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-MPI-IO	-1	13495189748626597623	MPIIO_F_SLOWEST_RANK_TIME	0.001022	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_OPEN_START_TIMESTAMP	0.003562	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_READ_START_TIMESTAMP	0.013633	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_WRITE_START_TIMESTAMP	0.013430	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_CLOSE_START_TIMESTAMP	0.013477	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_OPEN_END_TIMESTAMP	0.015774	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_READ_END_TIMESTAMP	0.015794	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_WRITE_END_TIMESTAMP	0.015858	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_CLOSE_END_TIMESTAMP	0.015867	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_READ_TIME	0.000035	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_WRITE_TIME	0.000216	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_META_TIME	0.008769	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_MAX_READ_TIME	0.000013	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_MAX_WRITE_TIME	0.000131	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_FASTEST_RANK_TIME	0.009020	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+MPI-IO	-1	13495189748626597623	MPIIO_F_SLOWEST_RANK_TIME	0.009020	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 MPI-IO	-1	13495189748626597623	MPIIO_F_VARIANCE_RANK_TIME	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 MPI-IO	-1	13495189748626597623	MPIIO_F_VARIANCE_RANK_BYTES	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 
@@ -295,24 +295,29 @@ MPI-IO	-1	13495189748626597623	MPIIO_F_VARIANCE_RANK_BYTES	0.000000	/files4/home
 #<module>	<rank>	<record id>	<counter>	<value>	<file name>	<mount pt>	<fs type>
 PNETCDF	-1	13495189748626597623	PNETCDF_INDEP_OPENS	6	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 PNETCDF	-1	13495189748626597623	PNETCDF_COLL_OPENS	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-PNETCDF	-1	13495189748626597623	PNETCDF_F_OPEN_START_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-PNETCDF	-1	13495189748626597623	PNETCDF_F_CLOSE_START_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_INDEP_READS	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_INDEP_WRITES	1	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_COLL_READS	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_COLL_WRITES	4	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_NB_READS	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_NB_WRITES	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_SYNCS	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_BYTES_READ	0	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_BYTES_WRITTEN	32	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_F_OPEN_START_TIMESTAMP	0.002595	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_F_CLOSE_START_TIMESTAMP	0.013474	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 PNETCDF	-1	13495189748626597623	PNETCDF_F_DELETE_START_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 PNETCDF	-1	13495189748626597623	PNETCDF_F_REDEF_START_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-PNETCDF	-1	13495189748626597623	PNETCDF_F_OPEN_END_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-PNETCDF	-1	13495189748626597623	PNETCDF_F_CLOSE_END_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_F_ENDDEF_START_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_F_SYNC_START_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_F_OPEN_END_TIMESTAMP	0.015818	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_F_CLOSE_END_TIMESTAMP	0.015872	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 PNETCDF	-1	13495189748626597623	PNETCDF_F_DELETE_END_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 PNETCDF	-1	13495189748626597623	PNETCDF_F_REDEF_END_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
-PNETCDF	4568962295106895872	0	PNETCDF_INDEP_OPENS	4570458730432299008	(null)	UNKNOWN	UNKNOWN
-PNETCDF	4568962295106895872	0	PNETCDF_COLL_OPENS	0	(null)	UNKNOWN	UNKNOWN
-PNETCDF	4568962295106895872	0	PNETCDF_F_OPEN_START_TIMESTAMP	1.000000	(null)	UNKNOWN	UNKNOWN
-PNETCDF	4568962295106895872	0	PNETCDF_F_CLOSE_START_TIMESTAMP	0.000000	(null)	UNKNOWN	UNKNOWN
-PNETCDF	4568962295106895872	0	PNETCDF_F_DELETE_START_TIMESTAMP	4.000000	(null)	UNKNOWN	UNKNOWN
-PNETCDF	4568962295106895872	0	PNETCDF_F_REDEF_START_TIMESTAMP	0.015972	(null)	UNKNOWN	UNKNOWN
-PNETCDF	4568962295106895872	0	PNETCDF_F_OPEN_END_TIMESTAMP	0.016044	(null)	UNKNOWN	UNKNOWN
-PNETCDF	4568962295106895872	0	PNETCDF_F_CLOSE_END_TIMESTAMP	0.000000	(null)	UNKNOWN	UNKNOWN
-PNETCDF	4568962295106895872	0	PNETCDF_F_DELETE_END_TIMESTAMP	0.000000	(null)	UNKNOWN	UNKNOWN
-PNETCDF	4568962295106895872	0	PNETCDF_F_REDEF_END_TIMESTAMP	32.000000	(null)	UNKNOWN	UNKNOWN
+PNETCDF	-1	13495189748626597623	PNETCDF_F_ENDDEF_END_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_F_SYNC_END_TIMESTAMP	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_F_READ_TIME	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
+PNETCDF	-1	13495189748626597623	PNETCDF_F_WRITE_TIME	0.000000	/files4/home/csl782/dpm/testcode/test_put_var.nc	/files4	ext4
 
 # *******************************************************
 # STDIO module data
@@ -351,17 +356,17 @@ STDIO	-1	15920181672442173319	STDIO_FASTEST_RANK_BYTES	132	<STDOUT>	UNKNOWN	UNKN
 STDIO	-1	15920181672442173319	STDIO_SLOWEST_RANK	0	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_SLOWEST_RANK_BYTES	132	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_F_META_TIME	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
-STDIO	-1	15920181672442173319	STDIO_F_WRITE_TIME	0.000045	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_WRITE_TIME	0.000038	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_F_READ_TIME	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_F_OPEN_START_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_F_CLOSE_START_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
-STDIO	-1	15920181672442173319	STDIO_F_WRITE_START_TIMESTAMP	0.003438	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_WRITE_START_TIMESTAMP	0.012679	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_F_READ_START_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_F_OPEN_END_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_F_CLOSE_END_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
-STDIO	-1	15920181672442173319	STDIO_F_WRITE_END_TIMESTAMP	0.015979	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_WRITE_END_TIMESTAMP	0.015824	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_F_READ_END_TIMESTAMP	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
-STDIO	-1	15920181672442173319	STDIO_F_FASTEST_RANK_TIME	0.000045	<STDOUT>	UNKNOWN	UNKNOWN
-STDIO	-1	15920181672442173319	STDIO_F_SLOWEST_RANK_TIME	0.000045	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_FASTEST_RANK_TIME	0.000038	<STDOUT>	UNKNOWN	UNKNOWN
+STDIO	-1	15920181672442173319	STDIO_F_SLOWEST_RANK_TIME	0.000038	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_F_VARIANCE_RANK_TIME	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
 STDIO	-1	15920181672442173319	STDIO_F_VARIANCE_RANK_BYTES	0.000000	<STDOUT>	UNKNOWN	UNKNOWN
