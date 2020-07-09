@@ -15,36 +15,36 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
   * Independent Functions
 	* ncmpi_put_var(1,a,s,m)
 		* Testfile: getput_var.c 
-		* Output file: 
+		* Output file: getput_var.txt 
 
 	* ncmpi_put_varn
 		* Testfile: 
-		* Output file: 
+		* Output file: getput_var.txt
 
 	* ncmpi_put_vard
 		* Testfile: 
-		* Output file: 
+		* Output file: getput_var.txt
 
 	* ncmpi_get_var(1,a,s,m)
 		* Testfile: getput_var.c 
-		* Output file: 
+		* Output file: getput_var.txt
 
 	* ncmpi_get_varn
 		* Testfile: 
-		* Output file: 
+		* Output file: getput_var.txt
 
 	* ncmpi_get_vard
 		* Testfile: 
-		* Output file: 
+		* Output file: getput_var.txt
 
   * Collective Functions 
 	* ncmpi_put_var*_all
 		* Testfile: getput_var_all.c 
-		* Output file: 
+		* Output file: getput_var.txt
 	
 	* ncmpi_get_var*_all
 		* Testfile: getput_var_all.c
-		* Output file: 
+		* Output file: getput_var.txt
 
 * Non-blocking Function APIs
   * Independent Functions 
