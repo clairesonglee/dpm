@@ -58,10 +58,18 @@ int put_var (MPI_Comm comm, char *filename, int cmode) {
 	for ( i = 0; i < TIMES*LATS*LONS; i++)
 		rh_vals[i] = 0.5; 
 
+	MPI_Offset putsize, putsize1, putsize2;
+	err = ncmpi_inq_put_size(ncid, &putsize1); ERR
+
 	MPI_Comm_rank(comm, &rank);
 	if (rank == 0) {
 		err = ncmpi_put_var_double(ncid, rh_id, rh_vals); ERR 
 	}
+
+	err = ncmpi_inq_put_size(ncid, &putsize2); ERR
+
+	putsize = putsize2 - putsize1; 
+	printf("Put size: %d\n", putsize);
 
 	err = ncmpi_end_indep_data(ncid); ERR
 
@@ -82,8 +90,16 @@ int put_var1_all (MPI_Comm comm, char *filename, int cmode) {
 
 	err = ncmpi_inq_varid(ncid, "rh", &rh_id); ERR
 
+	MPI_Offset putsize, putsize1, putsize2;
+	err = ncmpi_inq_put_size(ncid, &putsize1); ERR
+
 	/* collectively write single data value to file */
 	err = ncmpi_put_var1_double_all(ncid, rh_id, rh_index, &rh_val); ERR
+
+	err = ncmpi_inq_put_size(ncid, &putsize2); ERR
+
+	putsize = putsize2 - putsize1; 
+	printf("Put size: %d\n", putsize);
 
 	/* collectively read single data value from file */
 	/*
@@ -128,8 +144,16 @@ int put_vara_all (MPI_Comm comm, char *filename, int cmode) {
 	for (i=0; i<TIMES*LATS*LONS; i++)
     		rh_vals[i] = 0.5 + rank;
 
+	MPI_Offset putsize, putsize1, putsize2;
+	err = ncmpi_inq_put_size(ncid, &putsize1); ERR
+
 	/* collectively write a record into variable "rh" */
 	err = ncmpi_put_vara_double_all(ncid, rh_id, start, count, rh_vals); ERR
+	
+	err = ncmpi_inq_put_size(ncid, &putsize2); ERR
+
+	putsize = putsize2 - putsize1; 
+	printf("Put size: %d\n", putsize);
 
 	err = ncmpi_close(ncid); ERR
 
@@ -166,7 +190,15 @@ int put_vars_all (MPI_Comm comm, char *filename, int cmode) {
     		start[1] = 1;
 	}
     
+	MPI_Offset putsize, putsize1, putsize2;
+	err = ncmpi_inq_put_size(ncid, &putsize1); ERR
+
 	err = ncmpi_put_vars_float_all(ncid, rhid, start, count, stride, rh); ERR
+
+	err = ncmpi_inq_put_size(ncid, &putsize2); ERR
+
+	putsize = putsize2 - putsize1; 
+	printf("Put size: %d\n", putsize);
 
 	err = ncmpi_close(ncid); ERR
 
@@ -187,7 +219,15 @@ int put_varm_all (MPI_Comm comm, char *filename, int cmode) {
 
 	err = ncmpi_inq_varid(ncid, "rh", &rhid); ERR
 
+	MPI_Offset putsize, putsize1, putsize2;
+	err = ncmpi_inq_put_size(ncid, &putsize1); ERR
+ 
 	err = ncmpi_put_varm_float_all(ncid, rhid, start, count, stride, imap, buf);
+
+	err = ncmpi_inq_put_size(ncid, &putsize2); ERR
+
+	putsize = putsize2 - putsize1; 
+	printf("Put size: %d\n", putsize);
 
 	err = ncmpi_close(ncid); ERR
 
