@@ -5,9 +5,9 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 * darshan-pnetcdf-getput.m4
 	* darshan-pnetcdf-getput.h
 * darshan-pnetcdf-forward-decl-getput.m4
-	* darshan=pnecdf-forward-decl-getput.h 
+	* darshan-pnecdf-forward-decl-getput.h 
 * darshan-pnetcdf-stubs-getput.m4
-	* darshan=pnecdf-stubs-getput.h 
+	* darshan-pnecdf-stubs-getput.h 
 * getput-utils.m4
 
 ## Milestones 
@@ -65,7 +65,7 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 		* Testfile: 
 		* Output file: 
 
-	* ncmpi_iget_var*
+	* ncmpi_iget_var*_all
 		* Testfile: 
 		* Output file: 
 
@@ -83,3 +83,15 @@ This repo supports the parallel I/O library PNetCDF within the Darshan HPC chara
 	* ncmpi_wait_all
 		* Testfile: 
 		* Output file: 
+
+* Basic Function APIs
+  * Open Function
+	* ncmpi_open
+  * Close Function
+	* ncmpi_close
+  * Redef Function
+	* ncmpi_redef
+  * Enddef Function
+	* ncmpi_enddef
+  * Sync Function
+	* ncmpi_sync
